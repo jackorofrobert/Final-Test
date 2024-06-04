@@ -12,3 +12,13 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}

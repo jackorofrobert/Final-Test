@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { fetchMovies } from '../api/movieAPI';
 
 function MovieList() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/movies')
-      .then(response => response.json())
+    fetchMovies()
       .then(data => setMovies(data))
       .catch(error => console.error('Error fetching movies:', error));
   }, []);

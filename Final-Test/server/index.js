@@ -7,9 +7,9 @@ const path = require('path');
 const axios = require('axios');
 
 const app = express();
-const port = 3000;
+const port = 5000;
 
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors());
 app.use(bodyParser.json());
 app.use(morgan('tiny'));
 
@@ -36,10 +36,12 @@ app.get('/', (req, res) => {
   res.send('Hello from the movie server!');
 });
 
+// API lấy tất cả phim
 app.get('/api/movies', (req, res) => {
   res.json(movies);
 });
 
+// API thêm phim mới
 app.post('/api/movies', (req, res) => {
   const movie = req.body;
   movie.ID = movies.length + 1;
@@ -47,6 +49,7 @@ app.post('/api/movies', (req, res) => {
   res.status(201).send(movie);
 });
 
+// API cập nhật thông tin phim
 app.put('/api/movies/:id', (req, res) => {
   const id = parseInt(req.params.id);
   const movieIndex = movies.findIndex(m => m.ID === id);
@@ -58,23 +61,27 @@ app.put('/api/movies/:id', (req, res) => {
   }
 });
 
+// API xóa phim
 app.delete('/api/movies/:id', (req, res) => {
   const id = parseInt(req.params.id);
   movies = movies.filter(m => m.ID !== id);
   res.status(204).send();
 });
 
+// API tìm kiếm phim theo tên
 app.get('/api/movies/search', (req, res) => {
   const searchTerm = req.query.name.toLowerCase();
   const filteredMovies = movies.filter(m => m.name.toLowerCase().includes(searchTerm));
   res.json(filteredMovies);
 });
 
+// API lấy danh sách phim theo năm
 app.get('/api/movies/sort/year', (req, res) => {
   const sortedMovies = movies.sort((a, b) => a.year - b.year);
   res.json(sortedMovies);
 });
 
+// API đăng nhập
 app.post('/api/login', (req, res) => {
   const { username, password } = req.body;
   if (username === 'admin' && password === 'admin') {
@@ -84,10 +91,12 @@ app.post('/api/login', (req, res) => {
   }
 });
 
+// API đăng xuất
 app.post('/api/logout', (req, res) => {
   res.json({ message: 'Logout successful' });
 });
 
+// API tải lên hình ảnh
 app.post('/api/upload', upload.single('file'), (req, res) => {
   const file = req.file;
   if (!file) {
