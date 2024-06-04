@@ -1,69 +1,14 @@
-/* App.css */
 .App {
-  width: 90%;
-  margin: 20px auto;
-}
-
-.header {
-  background: #fff;
-  padding: 20px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   text-align: center;
 }
 
-.movie-list {
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-}
-
-.movie-item {
-  width: 200px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease-in-out;
-}
-
-.movie-item:hover {
-  transform: scale(1.05);
-}
-
-.movie-item img {
-  width: 100%;
-  height: auto;
-}
-
-.movie-info {
-  padding: 10px;
-  text-align: center;
-}
-
-.movie-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 80%;
-  max-width: 500px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  z-index: 1001;
-}
-
-.modal-content {
-  position: relative;
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  cursor: pointer;
-  font-size: 24px;
-  color: #666;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }

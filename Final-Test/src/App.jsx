@@ -1,13 +1,12 @@
 import React from 'react';
 import MovieList from './components/MovieList';
-import './App.css'; // Import specific styles for App
-import './index.css'; // Import global styles
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="header">
-        <h1>Movie UI</h1>
+      <header className="App-header">
+        <h1>Movie Database</h1>
       </header>
       <MovieList />
     </div>
