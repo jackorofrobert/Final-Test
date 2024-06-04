@@ -5,7 +5,7 @@ function MovieCard({ movie, onSelect }) {
     <div className="MovieCard" onClick={onSelect}>
       <img src={movie.image} alt={movie.name} />
       <h3>{movie.name}</h3>
-      <p>{movie.time} min</p> {/* Displaying the movie duration */}
+      <p>{movie.time} min</p>
     </div>
   );
 }

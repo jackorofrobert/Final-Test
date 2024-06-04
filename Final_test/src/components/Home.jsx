@@ -13,11 +13,11 @@ function Home() {
   }, []);
 
   const scrollLeft = () => {
-    movieContainerRef.current.scrollBy({ left: -220, behavior: 'smooth' }); // Adjust scroll step size based on your layout
+    movieContainerRef.current.scrollBy({ left: -220, behavior: 'smooth' });
   };
 
   const scrollRight = () => {
-    movieContainerRef.current.scrollBy({ left: 220, behavior: 'smooth' }); // Adjust scroll step size based on your layout
+    movieContainerRef.current.scrollBy({ left: 220, behavior: 'smooth' });
   };
 
   return (
