@@ -4,7 +4,7 @@ function MovieList() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch('/api/movies')
+    fetch('http://localhost:3000/api/movies')
       .then(response => response.json())
       .then(data => setMovies(data))
       .catch(error => console.error('Error fetching movies:', error));

@@ -1,4 +1,4 @@
-const API_BASE_URL = '/api/movies';
+const API_BASE_URL = 'http://localhost:3000/api/movies';
 
 // Fetch all movies
 export const fetchMovies = async () => {
