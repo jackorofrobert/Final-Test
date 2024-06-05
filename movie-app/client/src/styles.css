@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+nav {
+  background-color: #282c34;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav input[type="text"] {
+  padding: 5px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 3px;
+}
+
+nav button {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 3px;
+  color: #282c34;
+}
+
+nav button:hover {
+  background-color: #21a1f1;
+}
+
+.movie {
+  text-align: center;
+  margin: 10px;
+}
+
+.movie img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.movie h3 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.movie p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.login-container {
+  max-width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+}
+
+.login-container label {
+  display: inline-block;
+  width: 80px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: calc(100% - 100px);
+}
+
+.login-container button {
+  padding: 5px 20px;
+  cursor: pointer;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 3px;
+  color: #282c34;
+  margin-top: 10px;
+}
+
+.login-container button:hover {
+  background-color: #21a1f1;
+}
+
+.login-container p {
+  color: red;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav input[type="text"],
+  nav button {
+    margin-bottom: 10px;
+  }
+
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
+    width: calc(100% - 90px);
+  }
+
+  .login-container label {
+    width: auto;
+    text-align: left;
+    margin-right: 0;
+  }
+}
